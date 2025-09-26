@@ -1,4 +1,4 @@
-/*  GENERAL CSS THAT WILL BE APPLIED ACROSS ALL MEDIA BREAKPOINTS*/
+/* ======== RESET/PRESTYLE SHEET */
 
 :root {
     --primary: #2c3e50;
@@ -114,25 +114,82 @@ button,
     transition: var(--transition);
 }
 
-
-/* ======== MOBILE PHONE BREAKPOINTS 320 - 480 PX ======== */
-
 header {
     background-color: var(--primary);
     color: var(--background);
 }
+
+/* =========================================== 
+=========== GENERAL PERSISTANT STYLES ======== 
+============================================== */
+
+body {
+    margin-bottom: 10vh;
+}
+
+/* ======== HEADER ===========================*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 10px black;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+header li {
+    margin-left: var(--spacing-md);
+}
+
+.right-header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left-header-conainer {
+    display: flex;
+}
+
+/* ======== HERO ===========================*/
+
+main .hero {
+    height: 100vh;
+}
+
+/* ======== HEADER ===========================*/
+
+/* ======== HEADER ===========================*/
+
+/* ======== HEADER ===========================*/
+
+/* ======== HEADER ===========================*/
+
+/* ======== HEADER ===========================*/
+
+/* ======== MOBILE PHONE BREAKPOINTS 320 - 480 PX ======== */
+
 
 @media (min-width: 320px) and (max-width: 767px) {
     header ul {
         display: none;
     }
 
-    header {
+    header .nav-menu {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        height: 3.5rem;
+
+    }
+
+    header {
         padding: var(--spacing-sm) var(--spacing-md);
     }
 
@@ -141,16 +198,46 @@ header {
         flex-direction: row;
         justify-content: space-between;
         background-color: white;
-        padding: var(--spacing-sm) var(--spacing-md);
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
+        max-height: 10vh;
     }
 
     .sticky-nav-mobile>img {
         width: 2.5rem;
     }
+
+    .nav-icon {
+        flex-grow: 1;
+        padding: var(--spacing-sm);
+    }
+
+
+
+
+    main .hero {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: var(--spacing-lg) var(--spacing-md);
+        height: 80vh;
+        margin-bottom: 20vh;
+        gap: 2.5rem;
+    }
+
+    .social-action-btn {
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .social-action-btn img {
+        width: 50px;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -159,15 +246,9 @@ header {
     }
 
     header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        padding: var(--spacing-sm) var(--spacing-md);
     }
 
-    header ul {
-        display: flex;
-        flex-direction: row;
-    }
 }
 
 @media (min-width: 1025px) {
