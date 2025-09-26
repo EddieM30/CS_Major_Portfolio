@@ -11,7 +11,7 @@
 <body>
 
     <header class="nav-menu">
-        <div class="name">Edward Murphy</div>
+        <h1 class="name">Edward Murphy</h1>
         <div>
             <ul>
                 <li>About</li>
@@ -21,32 +21,48 @@
                 <li>Contact</li>
             </ul>
         </div>
+        <button>Theme</button>
     </header>
 
-    <hero>
-        <div class="greeting">
-            <h1 class="section-title">Hey, I'm Eddie...</h1>
-        </div>
-        <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.</p>
-        <div class="action-btn">
-            <button>Contact Btn</button>
-            <button>Resume Btn</button>
-        </div>
-        <div class="social-action-btn">
-            <button>GitHub</button>
-            <button>Linkdin</button>
-        </div>
-    </hero>
+    <nav class="sticky-nav-mobile">
+        <img class="nav-icon" src="SVG Icons/home-icon-silhouette.svg" alt="home">
+        <img class="nav-icon" src="SVG Icons/id-card.svg" alt="about">
+        <img class="nav-icon" src="SVG Icons/skill.svg" alt="skills">
+        <img class="nav-icon" src="SVG Icons/briefing.svg" alt="projects">
+        <img class="nav-icon" src="SVG Icons/mortarboard.svg" alt="education">
+        <img class="nav-icon" src="SVG Icons/contact-us.svg" alt="contact">
+    </nav>
+
+
 
     <main>
-        <div class="about-me-container">
-            <header class="section-header">
+
+        <section class="hero" id="hero">
+            <div class="greeting">
+                <h1 class="section-title">Hey, I'm Eddie...</h1>
+            </div>
+            <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                officia
+                deserunt mollit anim id est laborum.</p>
+            <div class="action-btns">
+                <button>Contact Btn</button>
+                <button>Resume Btn</button>
+            </div>
+            <div class="social-action-btn">
+                <button>GitHub</button>
+                <button>Linkdin</button>
+            </div>
+        </section>
+
+        <section class="about-me">
+            <div class="section-div">
                 <h1 class="section-title">About Me</h1>
-            </header>
+            </div>
             <div class="tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua.</div>
 
@@ -71,50 +87,50 @@
 
             <div class="current-gpa"></div>
 
-        </div>
-
-        <div class="skills-tech-container">
-            <header class="section-header">
-                <h1 class="section-title">Skills and Tech</h1>
-            </header>
-            <div class="programming-languages"></div>
-            <div class="web-tech"></div>
-            <div class="tools-and-frameworks"></div>
-            <div class="certificates-and-achievments"></div>
-        </div>
-
-        <div class="featured-projects-container">
-            <header class="section-header">
-                <h1 class="section-title">Featured Projects</h1>
-            </header>
-            <div class="featured">
-                <div class="project-card"></div>
-                <div class="project-card"></div>
             </div>
-            <div class="other-projects">
-                <div class="small-project-card"></div>
-                <div class="small-project-card"></div>
-            </div>
-        </div>
 
-        <div class="education-container">
-            <header class="section-header">
-                <h1 class="section-title">Education</h1>
-            </header>
-
-        </div>
-
-        <div class="contact-container">
-            <header class="section-header">
-                <h1 class="section-title">Contact Me</h1>
-                <div class="form-container">
-                    <form action=""></form>
+            <section class="skills">
+                <div class="section-div">
+                    <h1 class="section-title">Skills and Tech</h1>
                 </div>
-                <div class="contact-info"></div>
-                <div class="social-links"></div>
-                <div class="collab-cta"></div>
-            </header>
-        </div>
+                <div class="programming-languages"></div>
+                <div class="web-tech"></div>
+                <div class="tools-and-frameworks"></div>
+                <div class="certificates-and-achievments"></div>
+            </section>
+
+            <section class="projects">
+                <div class="section-div">
+                    <h1 class="section-title">Featured Projects</h1>
+                </div>
+                <div class="featured">
+                    <div class="project-card"></div>
+                    <div class="project-card"></div>
+                </div>
+                <div class="other-projects">
+                    <div class="small-project-card"></div>
+                    <div class="small-project-card"></div>
+                </div>
+            </section>
+
+            <section class="education">
+                <div class="section-div">
+                    <h1 class="section-title">Education</h1>
+                </div>
+
+            </section>
+
+            <section class="contact">
+                <div class="section-div">
+                    <h1 class="section-title">Contact Me</h1>
+                    <div class="form-container">
+                        <form action=""></form>
+                    </div>
+                    <div class="contact-info"></div>
+                    <div class="social-links"></div>
+                    <div class="collab-cta"></div>
+                </div>
+            </section>
     </main>
 
     <footer></footer>
