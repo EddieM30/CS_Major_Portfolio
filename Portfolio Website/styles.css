@@ -166,7 +166,7 @@ main .hero {
 /* ======== ABOUT ME ===========================*/
 
 .quick-facts,
-.num_of_projects,
+.num-of-projects,
 .current-gpa {
     border: dashed 2px black;
 }
@@ -184,7 +184,18 @@ main .hero {
 
 @media (min-width: 320px) and (max-width: 767px) {
     p {
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 42px;
     }
 
     header ul {
@@ -231,18 +242,53 @@ main .hero {
         padding: var(--spacing-lg) var(--spacing-md);
         height: 80vh;
         margin-bottom: 20vh;
-        gap: 2.5rem;
+        justify-content: space-around;
+    }
+
+    .action-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
     }
 
     .social-action-btn {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 2em;
     }
 
     .social-action-btn img {
         width: 50px;
     }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        padding: 0 var(--spacing-md);
+        gap: var(--spacing-lg);
+    }
+
+    .tagline {
+        text-align: center;
+
+    }
+
+    .quote {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .author {
+        font-style: italic;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+
 
 }
 
