@@ -163,7 +163,13 @@ main .hero {
     height: 100vh;
 }
 
-/* ======== HEADER ===========================*/
+/* ======== ABOUT ME ===========================*/
+
+.quick-facts,
+.num_of_projects,
+.current-gpa {
+    border: dashed 2px black;
+}
 
 /* ======== HEADER ===========================*/
 
@@ -177,6 +183,10 @@ main .hero {
 
 
 @media (min-width: 320px) and (max-width: 767px) {
+    p {
+        font-size: 14px;
+    }
+
     header ul {
         display: none;
     }
@@ -197,6 +207,7 @@ main .hero {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         background-color: white;
         position: fixed;
         bottom: 0;
@@ -207,8 +218,8 @@ main .hero {
 
     .sticky-nav-mobile img {
         display: inline;
-        height: 100%;
-        width: 100%;
+        height: 75%;
+        width: 75%;
         object-fit: contain;
     }
 
