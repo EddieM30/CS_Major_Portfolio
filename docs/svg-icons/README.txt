@@ -1,0 +1,1 @@
+This folder will contain copies of svg icons for GitHub Pages. Files are copies from root svg-icons/
