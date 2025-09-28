@@ -1,17 +1,20 @@
 /* ======== RESET/PRESTYLE SHEET */
 
 :root {
-    --primary: #3F72AF;
-    --secondary: #DBE2EF;
-    --accent: #112D4E;
-    --background: #F9F7F7;
-    --text: #112D4E;
+    --primary: #00b7ff;
+    --accent: #ff4500;
+    --accent2: #39ff14;
+    --background: #0f1415;
+    --text: white;
 
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
 
-    --transition: all 0.3s ease
+    --transition: all 0.3s ease;
+    /* mobile layout helpers */
+    --mobile-header-height: 64px;
+    --mobile-nav-height: 10vh;
 }
 
 *,
@@ -35,6 +38,9 @@ body {
     line-height: 1.6;
     color: var(--text);
     background-color: var(--background);
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
 }
 
 section,
@@ -114,18 +120,13 @@ button,
     transition: var(--transition);
 }
 
-header {
-    background-color: var(--primary);
-    color: var(--background);
-}
+
 
 /* =========================================== 
 =========== GENERAL PERSISTANT STYLES ======== 
 ============================================== */
 
-body {
-    margin-bottom: 10vh;
-}
+
 
 /* ======== HEADER ===========================*/
 
@@ -134,13 +135,17 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 1px 1px 10px black;
+    box-shadow: 1px 1px 10px rgb(29, 29, 29);
+    background-color: var(--background);
+    color: var(--text);
+    height: var(--mobile-header-height);
+    box-sizing: border-box;
+    padding: var(--spacing-sm) var(--spacing-md);
 }
 
 header ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
+
+    display: none;
 }
 
 header li {
@@ -157,154 +162,216 @@ header li {
     display: flex;
 }
 
+header .nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+/* give header a predictable height on small screens so we can size the hero */
+
+
 /* ======== HERO ===========================*/
 
+
 main .hero {
-    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - var(--mobile-header-height) - var(--mobile-nav-height));
+    justify-content: space-around;
 }
+
+.hero .section-title {
+    font-size: 3.5em;
+    border-left: 1px solid var(--accent2);
+    border-right: 1px solid var(--accent2);
+    border-radius: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.action-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.action-btns button {
+    width: 75vw;
+    color: var(--text);
+    font-weight: 600;
+}
+
+
 
 /* ======== ABOUT ME ===========================*/
-
-.quick-facts,
-.num-of-projects,
-.current-gpa {
-    border: dashed 2px black;
+.about-me {
+    background-color: var(--background);
+    color: var(--text);
+    border-top: solid 1px var(--primary);
+    border-radius: 2rem 2rem 0 0;
+    box-shadow: 0px -10px 10px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-lg) var(--spacing-md);
+    gap: var(--spacing-lg);
 }
 
-/* ======== HEADER ===========================*/
-
-/* ======== HEADER ===========================*/
-
-/* ======== HEADER ===========================*/
-
-/* ======== HEADER ===========================*/
-
-/* ======== MOBILE PHONE BREAKPOINTS 320 - 480 PX ======== */
-
-
-@media (min-width: 320px) and (max-width: 767px) {
-    p {
-        font-size: 16px;
-    }
-
-    body {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-    }
-
-    .section-title {
-        text-align: center;
-        font-size: 42px;
-    }
-
-    header ul {
-        display: none;
-    }
-
-    header .nav-menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-    }
-
-    header {
-        padding: var(--spacing-sm) var(--spacing-md);
-    }
-
-    .sticky-nav-mobile {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        background-color: white;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        max-height: 10vh;
-    }
-
-    .sticky-nav-mobile img {
-        display: inline;
-        height: 75%;
-        width: 75%;
-        object-fit: contain;
-    }
-
-    main .hero {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: var(--spacing-lg) var(--spacing-md);
-        height: 80vh;
-        margin-bottom: 20vh;
-        justify-content: space-around;
-    }
-
-    .action-btns {
-        display: flex;
-        flex-direction: column;
-        gap: 2.4rem;
-    }
-
-    .social-action-btn {
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-    }
-
-    .social-action-btn img {
-        width: 50px;
-    }
-
-    .about-me {
-        display: flex;
-        flex-direction: column;
-        padding: 0 var(--spacing-md);
-        gap: var(--spacing-lg);
-    }
-
-    .tagline {
-        text-align: center;
-
-    }
-
-    .quote {
-        font-weight: 700;
-        font-size: 20px;
-    }
-
-    .author {
-        font-style: italic;
-    }
-
-    .main-content {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-    }
-
-
-
+.about-me .section-title {
+    text-align: left;
+    font-size: 42px;
+    border-bottom: 1px dashed var(--primary);
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sticky-nav-mobile {
-        display: none;
-    }
-
-    header {
-        padding: var(--spacing-sm) var(--spacing-md);
-    }
-
+.tech-badge-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 3em;
+    row-gap: 2.5em;
+    background-color: var(--text);
+    padding: var(--spacing-lg);
+    border-radius: 50px;
+    border: 3px solid var(--accent2);
+    box-shadow: inset 1px 1px 10px rgb(190, 190, 190);
 }
 
-@media (min-width: 1025px) {
-    .sticky-nav-mobile {
-        display: none;
-    }
+.tech-badge-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 35%;
+    background-color: whitesmoke;
+    padding: var(--spacing-md);
+    color: var(--background);
+    border-radius: 10px;
+    box-shadow: 2px 1px 10px rgb(233, 233, 233);
+}
+
+/* =====================================================*/
+
+
+.sticky-nav-mobile {
+    display: flex;
+    flex-direction: row;
+    padding: var(--spacing-md) var(--spacing-sm);
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--text);
+    border-top: solid 1px var(--primary);
+    border-radius: 50px 50px 0 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--mobile-nav-height);
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* keep button content centered and give some horizontal breathing room */
+    object-fit: contain;
+    padding: 4px 6px;
+}
+
+/* Icon sizing: use a fixed pixel size so all icons align consistently */
+.nav-button img {
+    width: 36px;
+    height: 36px;
+    display: block;
+    /* ensure padding/margin behavior is predictable */
+    object-fit: contain;
+    margin: 0 auto;
+    padding: 0;
+    /* avoid extra whitespace from padding */
+}
+
+.icon-title {
+    color: rgb(80, 80, 80);
+    font-size: 12px;
+}
+
+/* keep mobile nav icons a predictable size and centered above the title */
+.sticky-nav-mobile img {
+    object-fit: contain;
+    width: 30px;
+    /* match .nav-button img */
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Make the home button slightly larger to emphasize it */
+.nav-home img {
+    width: 36px;
+    height: 36px;
+}
+
+/* Remove the default blue tap/click highlight on touch devices for mobile nav links
+       Keep keyboard accessibility by showing focus styles with :focus-visible */
+.sticky-nav-mobile a {
+    -webkit-tap-highlight-color: transparent;
+    /* iOS/Chrome */
+    color: inherit;
+    /* don't change color on active/visited */
+}
+
+.sticky-nav-mobile a:active,
+.sticky-nav-mobile a:visited {
+    color: inherit;
+}
+
+.sticky-nav-mobile a:focus {
+    outline: none;
+    /* remove default focus to control appearance with focus-visible */
+}
+
+.sticky-nav-mobile a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ================ Projects ================== */
+
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-sm);
+    border-right: 1px solid var(--accent2);
+    border-top: 1px solid var(--accent2);
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-right-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-badge img {
+    max-width: 10vw;
 }

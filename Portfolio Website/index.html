@@ -23,32 +23,43 @@
                 <li>Education</li>
                 <li>Contact</li>
             </ul>
-            <button>Theme</button>
+            <div class="theme">
+                Theme
+            </div>
         </div>
     </header>
 
     <nav class="sticky-nav-mobile">
-        <a href="#hero">
-            <img class="nav-icon" src="SVG Icons/home-icon-silhouette.svg" alt="home">
-        </a>
-        <a href="#about-me">
-            <img class="nav-icon" src="SVG Icons/id-card.svg" alt="about">
-        </a>
-        <a href="#skills">
-            <img src="SVG Icons/skill.svg" alt="skills">
-        </a>
-        <a href="#projects">
-            <img class="nav-icon" src="SVG Icons/briefing.svg" alt="projects">
-        </a>
-        <a href="#education">
-            <img class="nav-icon" src="SVG Icons/mortarboard.svg" alt="education">
-        </a>
-        <a href="#contact">
-            <img class="nav-icon" src="SVG Icons/contact-us.svg" alt="contact">
-        </a>
-
-
-
+        <div class="nav-button">
+            <a href="#about-me">
+                <img class="nav-icon" src="SVG Icons/info.svg" alt="about">
+            </a>
+            <span class="icon-title">About me</span>
+        </div>
+        <div class="nav-button">
+            <a href="#skills">
+                <img src="SVG Icons/knowledge.svg" alt="skills">
+            </a>
+            <span class="icon-title">Skills</span>
+        </div>
+        <div class="nav-button nav-home">
+            <a href="#hero">
+                <img class="nav-icon" src="SVG Icons/house-blank.svg" alt="home">
+            </a>
+            <span class="icon-title">Home</span>
+        </div>
+        <div class="nav-button">
+            <a href="#projects">
+                <img class="nav-icon" src="SVG Icons/blueprint.svg" alt="projects">
+            </a>
+            <span class="icon-title">Projects</span>
+        </div>
+        <div class="nav-button">
+            <a href="#contact">
+                <img class="nav-icon" src="SVG Icons/phone-plus.svg" alt="contact">
+            </a>
+            <span class="icon-title">Contact</span>
+        </div>
     </nav>
 
 
@@ -57,119 +68,92 @@
 
         <section class="hero" id="hero">
             <div class="greeting">
-                <h1 class="section-title">Hey, I'm Eddie...</h1>
+                <h1 class="section-title">Hey,<br>I'm Eddie</h1>
             </div>
-            <p class="intro-text">A first year Computer Science Major. As a self taught web developer my passion for
-                learning and curiosity is fueling my pursuit in Data Science and AI.</p>
+            <span class="tagline">Aspiring Software Engineer | CS Major at Reynolds Community College</span>
             <div class="action-btns">
-                <button>Contact Btn</button>
-                <button>Resume Btn</button>
+                <button>Check out my projects</button>
+                <button>Download my Resume</button>
             </div>
-            <div class="social-action-btn">
-                <a href="https://github.com/EddieM30">
-                    <img src="SVG Icons/github.svg" alt="">
-                </a>
-                <a href="https://www.linkedin.com/in/edward-murphy-62a495311/">
-                    <img src="SVG Icons/linkedin.svg" alt="">
-                </a>
 
-            </div>
         </section>
 
         <section class="about-me" id="about-me">
-            <div class="section-div">
-                <h1 class="section-title">About Me</h1>
+            <h2 class="section-title">About Me</h2>
+            <p class="personal-summary">I'm Eddie Murphy, a freshman Computer Science at J. Sargeant Reynolds Community
+                College. I love
+                building things - blending my artist's creativity with probleming-solving to craft meaningful software.
+                I'm excited to gain hands-on experience through internships and explore fields like Data Science and AI
+                to create impactful solutions.</p>
+            <p class="personal-highlights">
+                Self taught in web development, I'm exploring ideas like ecoLens, a concept for a gamified carbon
+                footprint tracker.
+            </p>
+            <div class="tech-badge-container">
+                <div class="tech-badge-card html5">
+                    <img src="SVG Icons/html-5.svg" alt="html5-badge">
+                    <div class="badge-name">HTML 5</div>
+                    <div class="proficiency">(Beginner)</div>
+                </div>
+                <div class="tech-badge-card html5">
+                    <img src="SVG Icons/js.svg" alt="html5-badge">
+                    <div class="badge-name">JavaScript</div>
+                    <div class="proficiency">(Beginner)</div>
+                </div>
+                <div class="tech-badge-card html5">
+                    <img src="SVG Icons/css-3.svg" alt="html5-badge">
+                    <div class="badge-name">CSS</div>
+                    <div class="proficiency">(Beginner)</div>
+                </div>
+                <div class="tech-badge-card html5">
+                    <img src="SVG Icons/python.svg" alt="html5-badge">
+                    <div class="badge-name">Python</div>
+                    <div class="proficiency">(Beginner)</div>
+                </div>
+                <div class="tech-badge-card html5">
+                    <img src="SVG Icons/git.svg" alt="html5-badge">
+                    <div class="badge-name">Git</div>
+                    <div class="proficiency">(Beginner)</div>
+                </div>
+
             </div>
-            <div class="tagline">
-                <span class="quote">"The important thing is not to stop questioning. Curiosity has its own reason for
-                    existing."</span><span class="author"> - Albert Einstein</span>
-            </div>
+            <div class="skills"></div>
 
-            <div class="main-content">
-                <p class="about-me-para1">I'm Eddie Murphy, a first year Computer Science major at J. Sargent Reynolds
-                    Community College in Richmond, VA, driven to harness technology for positive impact. I believe
-                    coding can unlock humanity's potential by solving real world problems, from data-driven insights to
-                    community-focused applications. With skills in HTML, CSS, JavaScript, and beginner-level Python and
-                    SQL, I'm developing Recovery Connect, a location-based networking app inspired by my own recovery
-                    journey to connect the recovery community to meetings and resources. My goal is to grow as a data
-                    scientist or AI developer while exploring game development, creating innovative solutions that
-                    empower communities.</p>
-
-                <p class="about-me-para2">In my downtime, I recharge through creative and nature-based pursuits that
-                    shape my approach to tech. Drawing and playing the guitar spark my creativity, inspiring
-                    user-friendly, intuitive designs in my projects. Spending time in nature grounds me, fueling my
-                    passion for sustainable tech and problem-solving. These hobbies keep me curious and ready to tackle
-                    new challenges in coding. </p>
-            </div>
-
-            <aside class="quick-facts">
-                <h2>Quick Facts</h2>
-                <div class="location">Location........Richmond</div>
-                <div class="year-in-college">Year.........Freshman (1st year)</div>
-                <div class="major">Major............Computer Science</div>
-                <div class="focus">Focus............Data Science & AI</div>
-            </aside>
-
-            <div class="num-of-projects">
-                <h2>Number of projects</h2>
-                <div>3+</div>
-            </div>
-
-            <div class="current-gpa">
-                <h2>Current GPA</h2>
-                <div>3.5</div>
-            </div>
-
-        </section>
-
-        <section class="skills" id="class">
-            <div class="section-div">
-                <h1 class="section-title">Skills and Tech</h1>
-            </div>
-            <div class="programming-languages"></div>
-            <div class="web-tech"></div>
-            <div class="tools-and-frameworks"></div>
-            <div class="certificates-and-achievments"></div>
+            <button class="more-to-know">Click Here if you Want to know more!</button>
         </section>
 
         <section class="projects" id="projects">
-            <div class="section-div">
-                <h1 class="section-title">Featured Projects</h1>
-            </div>
-            <div class="featured">
-                <div class="project-card"></div>
-                <div class="project-card"></div>
-            </div>
-            <div class="other-projects">
-                <div class="small-project-card"></div>
-                <div class="small-project-card"></div>
-            </div>
-        </section>
-
-        <section class="education" id="education">
-            <div class="section-div">
-                <h1 class="section-title">Education</h1>
-            </div>
-
-        </section>
-
-        <section class="contact" id="contact">
-            <div class="section-div">
-                <h1 class="section-title">Contact Me</h1>
-                <div class="form-container">
-                    <form action=""></form>
+            <h1 class="section-title">Projects</h1>
+            <div class="project-card">
+                <div class="top-container">
+                    <img src="project_images/wallpapersden.com_lenovo-thinkpad_3840x2160.jpg" alt="">
                 </div>
-                <div class="contact-info"></div>
-                <div class="social-links"></div>
-                <div class="collab-cta"></div>
+
+                <div class="bottom-container">
+                    <div class="bottom-left-container">
+                        <div class="project-name">To-do List</div>
+                        <div class="project-description">Simple todo list management system</div>
+                    </div>
+                    <div class="bottom-right-container">
+                        <div class="tech-badge"><img src="SVG Icons/html-5.svg" alt=""></div>
+                        <div class="tech-badge"><img src="SVG Icons/css-3.svg" alt=""></div>
+                        <div class="tech-badge"><img src="SVG Icons/js.svg" alt=""></div>
+                        <div class="tech-badge"><img src="SVG Icons/python.svg" alt=""></div>
+                    </div>
+
+                </div>
             </div>
         </section>
-    </main>
 
-    <footer></footer>
+        <section class="contact-footer">
+            <h1 class="section-title">Contact Me!</h1>
+            <form action="post"></form>
+            <footer class="footer">
+                footer info
+            </footer>
+        </section>
 
-
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
