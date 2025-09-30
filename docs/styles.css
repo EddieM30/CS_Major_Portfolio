@@ -376,3 +376,8 @@ main .hero {
 .tech-badge img {
     max-width: 10vw;
 }
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+}
