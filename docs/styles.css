@@ -47,7 +47,7 @@ body {
 
 section,
 .container {
-    padding: var(--spacing-sm)
+    padding: var(--spacing-md)
 }
 
 h1,
@@ -99,10 +99,29 @@ button {
 
 a,
 button,
-input,
 select,
 textarea {
     font-size: 1rem;
+}
+
+input {
+    font-size: 16px;
+    height: 38px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input:focus {
+    box-shadow: inset 1px 1px 10px rgb(163, 163, 163);
+
+}
+
+textarea {
+    height: 120px;
+    width: 100%;
 }
 
 img {
@@ -377,7 +396,28 @@ main .hero {
     max-width: 10vw;
 }
 
-.contact-me {
+.contact_me {
     display: flex;
     flex-direction: column;
+}
+
+.contact_me input {
+    margin-bottom: 10px;
+}
+
+textarea {
+    border-radius: 5px;
+    padding: var(--spacing-sm) var(--spacing-sm);
+}
+
+footer {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: .5rem;
+}
+
+.social-links img {
+    width: 1em;
 }

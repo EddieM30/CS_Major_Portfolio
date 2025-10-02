@@ -147,11 +147,10 @@
 
         <section class="contact-footer">
             <h1 class="section-title">Contact Me!</h1>
-            <form action="post">
+            <form class="contact_me" action="/submit-form" method="get">
                 <div class="name">
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="fname">
-                    <label for="lname">Last Name</label>
+                    <input type="text" id="fname" name="fname"> <label for="lname">Last Name</label><br>
                     <input type="text" id="lname" name="lname">
                 </div>
                 <div class="contact-info">
@@ -161,14 +160,24 @@
                     <input type="number" id="cell-num">
                 </div>
                 <label for="message">What's your message?</label>
-                <textarea name="message" id="message">Message...</textarea>
-
-
+                <textarea name="message" id="message" placeholder="Message..."></textarea>
             </form>
-            <footer class="footer">
-
-            </footer>
         </section>
+
+        <footer class="footer">
+            <div class="contact-info">
+                <div class="full-name">Edward Murphy Jr</div>
+                <div class="email">murphyedward80@gmail.com</div>
+                <div class="phone-number">804.349.2431</div>
+            </div>
+            <div class="social-links">
+                <div class="git-hub"><a href="https://github.com/EddieM30/"><img src="svg-icons/github (1).svg"
+                            alt=""></a></div>
+            </div>
+            <div class="copyright">© 2025 Edward Murphy. All rights reserved</div>
+
+        </footer>
+
 
         <script src="script.js"></script>
 </body>
