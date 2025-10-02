@@ -421,3 +421,53 @@ footer {
 .social-links img {
     width: 1em;
 }
+
+
+/* ================ Tablet =================== */
+
+@media (min-width: 787px) {
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .sticky-nav-mobile {
+        display: none;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: var(--spacing-md) var(--spacing-md);
+        height: 10vh;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    }
+
+    header div {
+        flex-grow: 1;
+    }
+
+    .right-header-container div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .middle-header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .hero {
+        height: calc(100vh - 10vh);
+        margin-top: 10vh;
+    }
+
+}
