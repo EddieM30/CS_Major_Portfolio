@@ -427,8 +427,23 @@ footer {
 
 @media (min-width: 787px) {
 
+    section {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    body {
+        margin-bottom: 0;
+        letter-spacing: 2px;
+    }
+
+    p {
+        line-height: 35px;
+        font-size: 20px;
+    }
+
     h1 {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .sticky-nav-mobile {
@@ -469,5 +484,59 @@ footer {
         height: calc(100vh - 10vh);
         margin-top: 10vh;
     }
+
+    .hero .section-title {
+        font-size: 5rem;
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    .action-btns {
+        flex-direction: row;
+    }
+
+    .action-btns button {
+        width: 25vw;
+        height: 3rem;
+    }
+
+
+
+    .about-me {
+        padding: 2em 1.5em;
+        display: grid;
+        grid-template-areas:
+            'header header header header'
+            'summary summary . .'
+            '. . highlights highlights'
+            'quick-facts quick-facts skills skills'
+            'quick-facts quick-facts skills skills'
+            '. button button .';
+        gap: 2.5em;
+    }
+
+    .about-me .section-title {
+        grid-area: header;
+    }
+
+    .about-me .personal-summary {
+        grid-area: summary;
+    }
+
+    .about-me .personal-highlights {
+        grid-area: highlights;
+    }
+
+    .about-me .tech-badge-container {
+        grid-area: skills;
+    }
+
+    .about-me .quick-facts {
+        grid-area: quick-facts;
+    }
+
+    .about-me .know-more {
+        grid-area: button;
+    }
+
 
 }
