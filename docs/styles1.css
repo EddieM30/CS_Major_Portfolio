@@ -1,18 +1,3 @@
-:root {
-  --primary: #00b7ff;
-  --secondary: #ff9900;
-  --accent: #ff4500;
-  --accent2: #39ff14;
-  --background: #0f1415;
-  --text: white;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 2rem;
-  --transition: all 0.3s ease;
-  --mobile-header-height: 64px;
-  --mobile-nav-height: 10vh;
-}
-
 *,
 *::before,
 *::after {
@@ -32,8 +17,8 @@ body {
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--text);
-  background-color: var(--background);
+  color: white;
+  background-color: #0f1415;
   margin-bottom: 10vh;
   display: flex;
   flex-direction: column;
@@ -41,7 +26,7 @@ body {
 
 section,
 .container {
-  padding: var(--spacing-md);
+  padding: 1rem;
 }
 
 h1,
@@ -67,18 +52,18 @@ a {
 }
 
 a {
-  color: var(--primary);
+  color: #00b7ff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 a:hover {
-  color: var(--secondary);
+  color: #ff9900;
 }
 
 button {
-  background-color: var(--primary);
-  color: var(--background);
-  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: #00b7ff;
+  color: #0f1415;
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -86,7 +71,7 @@ button {
 }
 
 :focus {
-  outline: 2px solid var(--accent);
+  outline: 2px solid #ff4500;
   outline-offset: 2px;
 }
 
@@ -114,7 +99,7 @@ textarea {
   height: 120px;
   width: 100%;
   border-radius: 5px;
-  padding: var(--spacing-sm);
+  padding: 0.5rem;
 }
 
 img {
@@ -131,7 +116,7 @@ img {
 a,
 button,
 .hover-effect {
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 header {
@@ -140,17 +125,17 @@ header {
   justify-content: space-between;
   align-items: center;
   box-shadow: 1px 1px 10px rgb(29, 29, 29);
-  background-color: var(--background);
-  color: var(--text);
-  height: var(--mobile-header-height);
+  background-color: #0f1415;
+  color: white;
+  height: 64px;
   box-sizing: border-box;
-  padding: var(--spacing-sm) var(--spacing-md);
+  padding: 0.5rem 1rem;
 }
 header ul {
   display: none;
 }
 header ul li {
-  margin-left: var(--spacing-md);
+  margin-left: 1rem;
 }
 header .right-header-container {
   display: flex;
@@ -172,13 +157,13 @@ main .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100vh - var(--mobile-header-height) - var(--mobile-nav-height));
+  height: calc(100vh - 64px - 10vh);
   justify-content: space-around;
 }
 main .hero .section-title {
   font-size: 3.5em;
-  border-left: 1px solid var(--accent2);
-  border-right: 1px solid var(--accent2);
+  border-left: 1px solid #39ff14;
+  border-right: 1px solid #39ff14;
   border-radius: 10px;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -190,24 +175,24 @@ main .hero .action-btns {
 }
 main .hero .action-btns button {
   width: 75vw;
-  color: var(--text);
+  color: white;
   font-weight: 600;
 }
 
 .about-me {
-  background-color: var(--background);
-  color: var(--text);
-  border-top: solid 1px var(--primary);
+  background-color: #0f1415;
+  color: white;
+  border-top: solid 1px #00b7ff;
   border-radius: 2rem 2rem 0 0;
   display: flex;
   flex-direction: column;
-  padding: var(--spacing-lg) var(--spacing-md);
-  gap: var(--spacing-lg);
+  padding: 2rem 1rem;
+  gap: 2rem;
 }
 .about-me .section-title {
   text-align: left;
   font-size: 42px;
-  border-bottom: 1px dashed var(--primary);
+  border-bottom: 1px dashed #00b7ff;
 }
 .about-me .tech-badge-container {
   display: flex;
@@ -217,11 +202,11 @@ main .hero .action-btns button {
   -moz-column-gap: 3em;
        column-gap: 3em;
   row-gap: 2.5em;
-  background-color: var(--text);
-  padding: var(--spacing-lg);
-  border-radius: 50px;
-  border: 3px solid var(--accent2);
-  box-shadow: inset 1px 1px 10px rgb(190, 190, 190);
+  background-color: #0f1415;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid #ff4500;
+  box-shadow: inset 1px 1px 10px rgb(163, 39, 39);
 }
 .about-me .tech-badge-container .tech-badge-card {
   display: flex;
@@ -229,27 +214,88 @@ main .hero .action-btns button {
   justify-content: center;
   align-items: center;
   max-width: 35%;
-  background-color: whitesmoke;
-  padding: var(--spacing-md);
-  color: var(--background);
+  background-color: rgb(0, 0, 0);
+  padding: 1rem;
+  color: #0f1415;
   border-radius: 10px;
   box-shadow: 0px 0px 11px rgb(163, 39, 39);
+}
+.about-me .tech-badge-container .tech-badge-card img {
+  width: 100%;
+}
+.about-me .quick-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #0f1415;
+  padding: 1rem;
+  border-radius: 15px;
+  border: 2px solid #ff4500;
+  box-shadow: inset 0px 0px 10px rgb(163, 39, 39);
+}
+.about-me .quick-facts h3 {
+  font-size: 1.5rem;
+  color: white;
+  border-bottom: 1px solid #ff4500;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+}
+.about-me .quick-facts ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.about-me .quick-facts li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  color: white;
+  padding: 0.5rem;
+  position: relative;
+  transform: all 0.3s ease;
+}
+.about-me .quick-facts li .fact-label {
+  font-weight: 600;
+  color: white;
+  flex-shrink: 0;
+  position: relative;
+  padding-right: 0.5rem;
+}
+.about-me .quick-facts li .fact-label::after {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  margin-left: 0.5ch;
+  width: calc(100% - 0.5ch);
+}
+.about-me .quick-facts li .fact-value {
+  font-weight: 400;
+  color: white;
+  flex-shrink: 0;
+  text-align: right;
 }
 
 .sticky-nav-mobile {
   display: flex;
   flex-direction: row;
-  padding: var(--spacing-md) var(--spacing-sm);
+  padding: 1rem 0.5rem;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--text);
-  border-top: solid 1px var(--primary);
+  background-color: white;
+  border-top: solid 1px #00b7ff;
   border-radius: 50px 50px 0 0;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  height: var(--mobile-nav-height);
+  height: 10vh;
 }
 .sticky-nav-mobile .nav-button {
   display: flex;
@@ -290,7 +336,7 @@ main .hero .action-btns button {
   outline: none;
 }
 .sticky-nav-mobile a:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid #ff4500;
   outline-offset: 2px;
 }
 .sticky-nav-mobile .icon-title {
@@ -305,9 +351,9 @@ main .hero .action-btns button {
 .projects .project-card {
   display: flex;
   flex-direction: column;
-  padding: var(--spacing-sm);
-  border-right: 1px solid var(--accent2);
-  border-top: 1px solid var(--accent2);
+  padding: 0.5rem;
+  border-right: 1px solid #39ff14;
+  border-top: 1px solid #39ff14;
 }
 
 .bottom-container {
@@ -370,7 +416,7 @@ footer .social-links img {
     top: 0;
     right: 0;
     left: 0;
-    padding: var(--spacing-md);
+    padding: 1rem;
     height: 10vh;
   }
   header ul {
@@ -391,12 +437,12 @@ footer .social-links img {
     justify-content: flex-end;
   }
   main .hero {
-    height: 90vh;
+    height: calc(100vh - 10vh);
     margin-top: 10vh;
   }
   main .hero .section-title {
     font-size: 5rem;
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: 1rem 2rem;
   }
   main .hero .action-btns {
     flex-direction: row;
@@ -408,7 +454,7 @@ footer .social-links img {
   main .about-me {
     padding: 2em 1.5em;
     display: grid;
-    grid-template-areas: "header header header header" "summary summary summary ." ". highlights highlights highlights" "skills skills skills skills" "quick-facts quick-facts . ." ". button button .";
+    grid-template-areas: "header header header header" "summary summary summary ." ". highlights highlights highlights" "skills skills quick-facts quick-facts" "skills skills quick-facts quick-facts" ". button button .";
     gap: 2.5em;
   }
   main .about-me .section-title {
@@ -417,13 +463,13 @@ footer .social-links img {
   main .about-me .personal-summary {
     grid-area: summary;
     background-color: rgba(59, 59, 59, 0.1);
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: 1rem 2rem;
     border-radius: 1em;
   }
   main .about-me .personal-highlights {
     grid-area: highlights;
     background-color: rgba(59, 59, 59, 0.1);
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: 1rem 2rem;
     border-radius: 1em;
   }
   main .about-me .tech-badge-container {
@@ -439,18 +485,36 @@ footer .social-links img {
   main .about-me .tech-badge-container .tech-badge-card {
     width: 10vw;
     background-color: black;
-    color: var(--text);
+    color: white;
     gap: 0.5em;
   }
   main .about-me .quick-facts {
     grid-area: quick-facts;
+    display: flex;
+    flex-direction: column;
+  }
+  main .about-me .quick-facts h3 {
+    font-size: 1.5rem;
   }
   main .about-me .know-more {
     grid-area: button;
-    color: var(--text);
-    width: 30vw;
-    padding: var(--spacing-md);
-    font-weight: 700;
-    font-size: 1.1em;
+  }
+  main .projects {
+    display: flex;
+    flex-direction: column;
+  }
+  main .projects .project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    border-right: 1px solid #39ff14;
+    border-top: 1px solid #39ff14;
+  }
+  main .contact_me {
+    display: flex;
+    flex-direction: column;
+  }
+  main .contact_me input {
+    margin-bottom: 10px;
   }
 }/*# sourceMappingURL=styles1.css.map */

@@ -1,22 +1,20 @@
 // Full SCSS for docs/ (self-contained for GitHub Pages)
 
 // ======== VARIABLES =========
-:root {
-    --primary: #00b7ff;
-    --secondary: #ff9900; // Added to fix undefined variable
-    --accent: #ff4500;
-    --accent2: #39ff14;
-    --background: #0f1415;
-    --text: white;
+$primary: #00b7ff;
+$secondary: #ff9900; // Added to fix undefined variable
+$accent: #ff4500;
+$accent2: #39ff14;
+$background: #0f1415;
+$text: white;
 
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 2rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
 
-    --transition: all 0.3s ease;
-    --mobile-header-height: 64px;
-    --mobile-nav-height: 10vh;
-}
+$transition: all 0.3s ease;
+$mobile-header-height: 64px;
+$mobile-nav-height: 10vh;
 
 // ======== RESET/PRESTYLE =========
 *,
@@ -38,8 +36,8 @@ body {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--text);
-    background-color: var(--background);
+    color: $text;
+    background-color: $background;
     margin-bottom: 10vh;
     display: flex;
     flex-direction: column;
@@ -48,7 +46,7 @@ body {
 // ======== GENERAL STYLES =========
 section,
 .container {
-    padding: var(--spacing-md);
+    padding: $spacing-md;
 }
 
 h1,
@@ -74,19 +72,19 @@ a {
 }
 
 a {
-    color: var(--primary);
+    color: $primary;
     text-decoration: none;
     transition: color 0.3s ease;
 
     &:hover {
-        color: var(--secondary);
+        color: $secondary;
     }
 }
 
 button {
-    background-color: var(--primary);
-    color: var(--background);
-    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: $primary;
+    color: $background;
+    padding: $spacing-sm $spacing-md;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -94,7 +92,7 @@ button {
 }
 
 :focus {
-    outline: 2px solid var(--accent);
+    outline: 2px solid $accent;
     outline-offset: 2px;
 }
 
@@ -123,7 +121,7 @@ textarea {
     height: 120px;
     width: 100%;
     border-radius: 5px;
-    padding: var(--spacing-sm);
+    padding: $spacing-sm;
 }
 
 img {
@@ -140,7 +138,7 @@ img {
 a,
 button,
 .hover-effect {
-    transition: var(--transition);
+    transition: $transition;
 }
 
 // ======== HEADER =========
@@ -150,17 +148,17 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 1px 1px 10px rgb(29, 29, 29);
-    background-color: var(--background);
-    color: var(--text);
-    height: var(--mobile-header-height);
+    background-color: $background;
+    color: $text;
+    height: $mobile-header-height;
     box-sizing: border-box;
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: $spacing-sm $spacing-md;
 
     ul {
         display: none;
 
         li {
-            margin-left: var(--spacing-md);
+            margin-left: $spacing-md;
         }
     }
 
@@ -189,13 +187,13 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: calc(100vh - var(--mobile-header-height) - var(--mobile-nav-height));
+        height: calc(100vh - #{$mobile-header-height} - #{$mobile-nav-height});
         justify-content: space-around;
 
         .section-title {
             font-size: 3.5em;
-            border-left: 1px solid var(--accent2);
-            border-right: 1px solid var(--accent2);
+            border-left: 1px solid $accent2;
+            border-right: 1px solid $accent2;
             border-radius: 10px;
             padding-left: 1rem;
             padding-right: 1rem;
@@ -208,7 +206,7 @@ main {
 
             button {
                 width: 75vw;
-                color: var(--text);
+                color: $text;
                 font-weight: 600;
             }
         }
@@ -217,19 +215,19 @@ main {
 
 // ======== ABOUT ME =========
 .about-me {
-    background-color: var(--background);
-    color: var(--text);
-    border-top: solid 1px var(--primary);
+    background-color: $background;
+    color: $text;
+    border-top: solid 1px $primary;
     border-radius: 2rem 2rem 0 0;
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-lg) var(--spacing-md);
-    gap: var(--spacing-lg);
+    padding: $spacing-lg $spacing-md;
+    gap: $spacing-lg;
 
     .section-title {
         text-align: left;
         font-size: 42px;
-        border-bottom: 1px dashed var(--primary);
+        border-bottom: 1px dashed $primary;
     }
 
     .tech-badge-container {
@@ -239,11 +237,11 @@ main {
         justify-content: center;
         column-gap: 3em;
         row-gap: 2.5em;
-        background-color: var(--text);
-        padding: var(--spacing-lg);
-        border-radius: 50px;
-        border: 3px solid var(--accent2);
-        box-shadow: inset 1px 1px 10px rgb(190, 190, 190);
+        background-color: $background;
+        padding: $spacing-lg;
+        border-radius: 15px;
+        border: 2px solid $accent;
+        box-shadow: inset 1px 1px 10px rgb(163, 39, 39);
 
         .tech-badge-card {
             display: flex;
@@ -251,12 +249,85 @@ main {
             justify-content: center;
             align-items: center;
             max-width: 35%;
-            background-color: whitesmoke;
-            padding: var(--spacing-md);
-            color: var(--background);
+            background-color: rgb(0, 0, 0);
+            padding: $spacing-md;
+            color: $background;
             border-radius: 10px;
             box-shadow: 0px 0px 11px rgb(163, 39, 39);
+
+            img {
+                width: 100%;
+            }
         }
+    }
+
+    .quick-facts {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+        background-color: $background;
+        padding: $spacing-md;
+        border-radius: 15px;
+        border: 2px solid $accent;
+        box-shadow: inset 0px 0px 10px rgb(163, 39, 39);
+
+        h3 {
+            font-size: 1.5rem;
+            color: $text;
+            border-bottom: 1px solid $accent;
+            padding-bottom: $spacing-sm;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-sm;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+            color: $text;
+            padding: $spacing-sm;
+            position: relative;
+            transform: $transition;
+
+
+
+            .fact-label {
+                font-weight: 600;
+                color: $text;
+                flex-shrink: 0;
+                position: relative;
+                padding-right: $spacing-sm;
+
+                &::after {
+
+                    display: inline-block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    position: absolute;
+                    left: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: $text;
+                    margin-left: 0.5ch;
+                    width: calc(100% - 0.5ch);
+                }
+            }
+
+            .fact-value {
+                font-weight: 400;
+                color: $text;
+                flex-shrink: 0;
+                text-align: right;
+            }
+        }
+
     }
 }
 
@@ -264,17 +335,17 @@ main {
 .sticky-nav-mobile {
     display: flex;
     flex-direction: row;
-    padding: var(--spacing-md) var(--spacing-sm);
+    padding: $spacing-md $spacing-sm;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--text);
-    border-top: solid 1px var(--primary);
+    background-color: $text;
+    border-top: solid 1px $primary;
     border-radius: 50px 50px 0 0;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: var(--mobile-nav-height);
+    height: $mobile-nav-height;
 
     .nav-button {
         display: flex;
@@ -322,7 +393,7 @@ main {
         }
 
         &:focus-visible {
-            outline: 2px solid var(--accent);
+            outline: 2px solid $accent;
             outline-offset: 2px;
         }
     }
@@ -341,9 +412,9 @@ main {
     .project-card {
         display: flex;
         flex-direction: column;
-        padding: var(--spacing-sm);
-        border-right: 1px solid var(--accent2);
-        border-top: 1px solid var(--accent2);
+        padding: $spacing-sm;
+        border-right: 1px solid $accent2;
+        border-top: 1px solid $accent2;
     }
 }
 
@@ -422,7 +493,7 @@ footer {
         top: 0;
         right: 0;
         left: 0;
-        padding: var(--spacing-md);
+        padding: $spacing-md;
         height: 10vh;
 
         ul {
@@ -451,12 +522,12 @@ footer {
 
     main {
         .hero {
-            height: calc(100vh - 10vh);
+            height: calc(100vh - #{$mobile-nav-height});
             margin-top: 10vh;
 
             .section-title {
                 font-size: 5rem;
-                padding: var(--spacing-md) var(--spacing-lg);
+                padding: $spacing-md $spacing-lg;
             }
 
             .action-btns {
@@ -476,8 +547,8 @@ footer {
                 'header header header header'
                 'summary summary summary .'
                 '. highlights highlights highlights'
-                'skills skills skills skills'
-                'quick-facts quick-facts . .'
+                'skills skills quick-facts quick-facts'
+                'skills skills quick-facts quick-facts'
                 '. button button .';
             gap: 2.5em;
 
@@ -488,14 +559,14 @@ footer {
             .personal-summary {
                 grid-area: summary;
                 background-color: rgba(59, 59, 59, 0.1);
-                padding: var(--spacing-md) var(--spacing-lg);
+                padding: $spacing-md $spacing-lg;
                 border-radius: 1em;
             }
 
             .personal-highlights {
                 grid-area: highlights;
                 background-color: rgba(59, 59, 59, 0.1);
-                padding: var(--spacing-md) var(--spacing-lg);
+                padding: $spacing-md $spacing-lg;
                 border-radius: 1em;
             }
 
@@ -514,22 +585,45 @@ footer {
                 .tech-badge-card {
                     width: 10vw;
                     background-color: black;
-                    color: var(--text);
+                    color: $text;
                     gap: 0.5em;
                 }
             }
 
             .quick-facts {
                 grid-area: quick-facts;
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    font-size: 1.5rem;
+                }
             }
 
             .know-more {
                 grid-area: button;
-                color: var(--text);
-                width: 30vw;
-                padding: var(--spacing-md);
-                font-weight: 700;
-                font-size: 1.1em;
+            }
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+
+            .project-card {
+                display: flex;
+                flex-direction: column;
+                padding: $spacing-sm;
+                border-right: 1px solid $accent2;
+                border-top: 1px solid $accent2;
+            }
+        }
+
+        .contact_me {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                margin-bottom: 10px;
             }
         }
     }
