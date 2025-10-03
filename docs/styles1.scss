@@ -449,81 +449,88 @@ footer {
         }
     }
 
-    .hero {
-        height: calc(100vh - 10vh);
-        margin-top: 10vh;
+    main {
+        .hero {
+            height: calc(100vh - 10vh);
+            margin-top: 10vh;
 
-        .section-title {
-            font-size: 5rem;
-            padding: var(--spacing-md) var(--spacing-lg);
-        }
-
-        .action-btns {
-            flex-direction: row;
-
-            button {
-                width: 25vw;
-                height: 3rem;
-            }
-        }
-    }
-
-    .about-me {
-        padding: 2em 1.5em;
-        display: grid;
-        grid-template-areas:
-            'header header header header'
-            'summary summary summary .'
-            '. highlights highlights highlights'
-            'skills skills skills skills'
-            'quick-facts quick-facts . .'
-            '. button button .';
-        gap: 2.5em;
-
-        .section-title {
-            grid-area: header;
-        }
-
-        .personal-summary {
-            grid-area: summary;
-            background-color: rgba(59, 59, 59, 0.1);
-            padding: var(--spacing-md) var(--spacing-lg);
-            border-radius: 1em;
-        }
-
-        .personal-highlights {
-            grid-area: highlights;
-            background-color: rgba(59, 59, 59, 0.1);
-            padding: var(--spacing-md) var(--spacing-lg);
-            border-radius: 1em;
-        }
-
-        .tech-badge-container {
-            grid-area: skills;
-            background-color: black;
-
-            img {
-                width: 250px;
+            .section-title {
+                font-size: 5rem;
+                padding: var(--spacing-md) var(--spacing-lg);
             }
 
-            button {
-                color: white !important;
+            .action-btns {
+                flex-direction: row;
+
+                button {
+                    width: 25vw;
+                    height: 3rem;
+                }
+            }
+        }
+
+        .about-me {
+            padding: 2em 1.5em;
+            display: grid;
+            grid-template-areas:
+                'header header header header'
+                'summary summary summary .'
+                '. highlights highlights highlights'
+                'skills skills skills skills'
+                'quick-facts quick-facts . .'
+                '. button button .';
+            gap: 2.5em;
+
+            .section-title {
+                grid-area: header;
             }
 
-            .tech-badge-card {
-                width: 10vw;
+            .personal-summary {
+                grid-area: summary;
+                background-color: rgba(59, 59, 59, 0.1);
+                padding: var(--spacing-md) var(--spacing-lg);
+                border-radius: 1em;
+            }
+
+            .personal-highlights {
+                grid-area: highlights;
+                background-color: rgba(59, 59, 59, 0.1);
+                padding: var(--spacing-md) var(--spacing-lg);
+                border-radius: 1em;
+            }
+
+            .tech-badge-container {
+                grid-area: skills;
                 background-color: black;
-                color: var(--text);
-                gap: 0.5em;
+
+                img {
+                    width: 250px;
+                }
+
+                button {
+                    color: white !important;
+                }
+
+                .tech-badge-card {
+                    width: 10vw;
+                    background-color: black;
+                    color: var(--text);
+                    gap: 0.5em;
+                }
             }
-        }
 
-        .quick-facts {
-            grid-area: quick-facts;
-        }
+            .quick-facts {
+                grid-area: quick-facts;
+            }
 
-        .know-more {
-            grid-area: button;
+            .know-more {
+                grid-area: button;
+                color: var(--text);
+                width: 30vw;
+                padding: var(--spacing-md);
+                font-weight: 700;
+                font-size: 1.1em;
+            }
         }
     }
 }

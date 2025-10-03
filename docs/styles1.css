@@ -390,62 +390,67 @@ footer .social-links img {
     flex-direction: row;
     justify-content: flex-end;
   }
-  .hero {
+  main .hero {
     height: 90vh;
     margin-top: 10vh;
   }
-  .hero .section-title {
+  main .hero .section-title {
     font-size: 5rem;
     padding: var(--spacing-md) var(--spacing-lg);
   }
-  .hero .action-btns {
+  main .hero .action-btns {
     flex-direction: row;
   }
-  .hero .action-btns button {
+  main .hero .action-btns button {
     width: 25vw;
     height: 3rem;
   }
-  .about-me {
+  main .about-me {
     padding: 2em 1.5em;
     display: grid;
     grid-template-areas: "header header header header" "summary summary summary ." ". highlights highlights highlights" "skills skills skills skills" "quick-facts quick-facts . ." ". button button .";
     gap: 2.5em;
   }
-  .about-me .section-title {
+  main .about-me .section-title {
     grid-area: header;
   }
-  .about-me .personal-summary {
+  main .about-me .personal-summary {
     grid-area: summary;
     background-color: rgba(59, 59, 59, 0.1);
     padding: var(--spacing-md) var(--spacing-lg);
     border-radius: 1em;
   }
-  .about-me .personal-highlights {
+  main .about-me .personal-highlights {
     grid-area: highlights;
     background-color: rgba(59, 59, 59, 0.1);
     padding: var(--spacing-md) var(--spacing-lg);
     border-radius: 1em;
   }
-  .about-me .tech-badge-container {
+  main .about-me .tech-badge-container {
     grid-area: skills;
     background-color: black;
   }
-  .about-me .tech-badge-container img {
+  main .about-me .tech-badge-container img {
     width: 250px;
   }
-  .about-me .tech-badge-container button {
+  main .about-me .tech-badge-container button {
     color: white !important;
   }
-  .about-me .tech-badge-container .tech-badge-card {
+  main .about-me .tech-badge-container .tech-badge-card {
     width: 10vw;
     background-color: black;
     color: var(--text);
     gap: 0.5em;
   }
-  .about-me .quick-facts {
+  main .about-me .quick-facts {
     grid-area: quick-facts;
   }
-  .about-me .know-more {
+  main .about-me .know-more {
     grid-area: button;
+    color: var(--text);
+    width: 30vw;
+    padding: var(--spacing-md);
+    font-weight: 700;
+    font-size: 1.1em;
   }
 }/*# sourceMappingURL=styles1.css.map */
