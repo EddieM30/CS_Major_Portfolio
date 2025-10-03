@@ -236,7 +236,6 @@ main .hero {
     color: var(--text);
     border-top: solid 1px var(--primary);
     border-radius: 2rem 2rem 0 0;
-    box-shadow: 0px -10px 10px rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     padding: var(--spacing-lg) var(--spacing-md);
@@ -273,7 +272,7 @@ main .hero {
     padding: var(--spacing-md);
     color: var(--background);
     border-radius: 10px;
-    box-shadow: 2px 1px 10px rgb(233, 233, 233);
+    box-shadow: 0px 0px 11px rgb(163, 39, 39);
 }
 
 /* =====================================================*/
@@ -506,28 +505,36 @@ footer {
         display: grid;
         grid-template-areas:
             'header header header header'
-            'summary summary . .'
-            '. . highlights highlights'
-            'quick-facts quick-facts skills skills'
-            'quick-facts quick-facts skills skills'
+            'summary summary summary .'
+            '. highlights highlights highlights'
+            'skills skills skills skills'
+            'quick-facts quick-facts . .'
             '. button button .';
         gap: 2.5em;
     }
 
     .about-me .section-title {
         grid-area: header;
+
     }
 
     .about-me .personal-summary {
         grid-area: summary;
+        background-color: rgba(59, 59, 59, 0.1);
+        padding: var(--spacing-md) var(--spacing-lg);
+        border-radius: 1em;
     }
 
     .about-me .personal-highlights {
         grid-area: highlights;
+        background-color: rgba(59, 59, 59, 0.1);
+        padding: var(--spacing-md) var(--spacing-lg);
+        border-radius: 1em;
     }
 
     .about-me .tech-badge-container {
         grid-area: skills;
+
     }
 
     .about-me .quick-facts {
@@ -536,6 +543,26 @@ footer {
 
     .about-me .know-more {
         grid-area: button;
+    }
+
+    .tech-badge-container {
+        background-color: black;
+    }
+
+    .tech-badge-card {
+        width: 10vw;
+        background-color: black;
+        color: var(--text);
+        gap: .5em;
+
+    }
+
+    .tech-badge-container img {
+        width: 250px;
+    }
+
+    .tech-badge-container button {
+        color: white !important;
     }
 
 
