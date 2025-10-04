@@ -347,13 +347,19 @@ main .hero .action-btns button {
 .projects {
   display: flex;
   flex-direction: column;
+  border-top: #00b7ff 1px solid;
+  border-radius: 2rem 2rem 0 0;
+  padding: 2rem 1rem;
+}
+.projects .section-title {
+  text-align: left;
+  font-size: 42px;
+  border-bottom: 1px dashed #00b7ff;
 }
 .projects .project-card {
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
-  border-right: 1px solid #39ff14;
-  border-top: 1px solid #39ff14;
 }
 
 .bottom-container {
@@ -436,6 +442,13 @@ footer .social-links img {
     flex-direction: row;
     justify-content: flex-end;
   }
+  header .middle-header-container a {
+    color: white;
+  }
+  header .middle-header-container a:hover {
+    text-decoration: underline;
+    color: #ff4500;
+  }
   main .hero {
     height: calc(100vh - 10vh);
     margin-top: 10vh;
@@ -500,15 +513,31 @@ footer .social-links img {
     grid-area: button;
   }
   main .projects {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: "header header" "featured featured" "featured featured";
+    gap: 15px;
+  }
+  main .projects .section-title {
+    grid-area: header;
   }
   main .projects .project-card {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
-    border-right: 1px solid #39ff14;
-    border-top: 1px solid #39ff14;
+    padding: 1rem;
+    background-color: rgb(148, 148, 148);
+    gap: 1em;
+  }
+  main .projects .project-card .bottom-container {
+    display: flex;
+    flex-direction: column;
+  }
+  main .projects .project-card .bottom-right-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  main .projects .project-card .bottom-right-container img {
+    width: 100%;
   }
   main .contact_me {
     display: flex;

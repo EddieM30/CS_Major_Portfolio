@@ -298,6 +298,8 @@ main {
 
 
 
+
+
             .fact-label {
                 font-weight: 600;
                 color: $text;
@@ -408,13 +410,20 @@ main {
 .projects {
     display: flex;
     flex-direction: column;
+    border-top: $primary 1px solid;
+    border-radius: 2rem 2rem 0 0;
+    padding: $spacing-lg $spacing-md;
+
+    .section-title {
+        text-align: left;
+        font-size: 42px;
+        border-bottom: 1px dashed $primary;
+    }
 
     .project-card {
         display: flex;
         flex-direction: column;
         padding: $spacing-sm;
-        border-right: 1px solid $accent2;
-        border-top: 1px solid $accent2;
     }
 }
 
@@ -517,6 +526,15 @@ footer {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
+
+            a {
+                color: $text;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $accent;
+                }
+            }
         }
     }
 
@@ -606,15 +624,38 @@ footer {
         }
 
         .projects {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-areas:
+                'header header'
+                'featured featured'
+                'featured featured';
+            gap: 15px;
+
+            .section-title {
+                grid-area: header;
+            }
 
             .project-card {
                 display: flex;
                 flex-direction: column;
-                padding: $spacing-sm;
-                border-right: 1px solid $accent2;
-                border-top: 1px solid $accent2;
+                padding: $spacing-md;
+                background-color: rgb(148, 148, 148);
+                gap: 1em;
+
+                .bottom-container {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .bottom-right-container {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+
+                    img {
+                        width: 100%;
+                    }
+                }
             }
         }
 
